@@ -1,23 +1,29 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+	<div>
+		<my-addition></my-addition>
+		<hr>
+		<my-subtraction></my-subtraction>
+	</div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+	// // //导入组件，可以注册为私有组件
+	 import Addition from './components/Addition.vue'
+	 import Subtraction from './components/Subtraction.vue'
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		components: {
+	// 		//定义成私有组件
+		'my-addition': Addition,
+			'my-subtraction': Subtraction
+		}
+	 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
